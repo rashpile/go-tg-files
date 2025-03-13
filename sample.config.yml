@@ -1,0 +1,9 @@
+categories:
+  - name: images
+    path: ./files/images
+  - name: books
+    path: ./files/books
+  - name: audio
+    path: ./files/audio
+  - name: other
+    path: ./files/misc
