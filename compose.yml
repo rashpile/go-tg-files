@@ -1,0 +1,13 @@
+services:
+  tg-filebot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: telegram-file-saver
+    volumes:
+      - ./config.yml:/app/config.yml
+      - ./files:/app/files
+      - ./books:/app/books
+    restart: unless-stopped
+    environment:
+      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}  # Will use .env file if present
